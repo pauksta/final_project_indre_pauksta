@@ -36,4 +36,13 @@ public class Common {
         getElement(locator).click();
     }
 
+    public static void sendKeysToElement(By locator, String text) {
+        getElement(locator).sendKeys(text);
+    }
+
+    public static String getTextFromElement(By locator) {
+        return getElement(locator).getText();
+    }
+
+
 }
