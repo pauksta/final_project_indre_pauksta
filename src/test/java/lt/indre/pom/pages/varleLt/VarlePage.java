@@ -96,5 +96,17 @@ public class VarlePage {
     public static void clickOnPrekiuKrepselis() {
         Common.clickOnElement(Locator.Varle.VarleLtWebsite.buttonPrekiuKrepselis);
     }
+    public static void clickOnItem() {
+        Common.clickOnElement(Locator.Varle.VarleLtWebsite.kavosaparatas);
+    }
+    public static void clickOnPlusToIncreaseQuantityOfItem() {
+        Common.clickOnElement(Locator.Varle.VarleLtWebsite.buttonQuantityUp);
+    }
+    public static void clickOnXToRemoveItemsFromKrepselis() {
+        Common.clickOnElement(Locator.Varle.VarleLtWebsite.buttonRemoveItemFromKrepselis);
+    }
+    public static String readMessageEmptyBasket() {
+        return Common.getTextFromElement(Locator.Varle.VarleLtWebsite.paragraphEmptyBasket);
+    }
 
 }

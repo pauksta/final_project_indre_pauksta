@@ -81,4 +81,31 @@ public class VarleTest extends TestBase {
         );
     }
 
+    @Test
+    public void testDeleteItemsFromPrekiuKrepselis() {
+        String expectedResult = "Krepšelis\nTuščias";
+        System.out.println(expectedResult);
+        String actualResult;
+        String itemTitle = "Kavos aparatas DeLonghi ECAM22.110.SB";
+
+        VarlePage.writeItemTitleInPaieska(itemTitle);
+        Common.clickEnterButton();
+        VarlePage.clickOnItem();
+        VarlePage.clickOnPlusToIncreaseQuantityOfItem();
+        VarlePage.clickOnButtonIKrepseli();
+        VarlePage.clickOnbuttonPrekintisToliau();
+        VarlePage.clickOnPrekiuKrepselis();
+        VarlePage.clickOnXToRemoveItemsFromKrepselis();
+        actualResult = VarlePage.readMessageEmptyBasket();
+
+        Assert.assertTrue(
+                actualResult.contains(expectedResult),
+                "\nActual: %s, \nExpected: %s".formatted(
+                        actualResult, expectedResult
+                )
+        );
+    }
+
+
+
 }

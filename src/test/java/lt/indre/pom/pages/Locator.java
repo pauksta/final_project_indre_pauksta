@@ -50,6 +50,11 @@ public class Locator {
             public static By buttonPrekintisToliau = By.xpath("//button [@class = 'secondary-button' ]");
             public static By buttonPrekiuKrepselis = By.xpath("//span [@class = 'cart-items' ]");
 
+            public static By kavosaparatas = By.xpath("//div [@class = 'img-container']");
+            public static By buttonQuantityUp = By.xpath("//button [@class = 'quantity-up' ]");
+            public static By buttonRemoveItemFromKrepselis = By.xpath("//a [@class = 'remove' ]");
+            public static By paragraphEmptyBasket = By.xpath("//div [@class = 'shopping-container' ]");
+
             public static By attributeIdPrisijungimas(String attributeId, String attribute2Id) {
                 return By.xpath("//input [@type = '%s' and @name = '%s']".formatted(attributeId, attribute2Id));
             }
