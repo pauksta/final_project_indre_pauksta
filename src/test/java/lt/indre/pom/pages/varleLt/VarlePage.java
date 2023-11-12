@@ -75,6 +75,26 @@ public class VarlePage {
     public static String readMessageAfterUnsuccessfulLogin() {
         return Common.getTextFromElement(Locator.Varle.VarleLtWebsite.messageAfterUnsuccessfulLogin);
     }
-
+    public static void writeItemTitleInPaieska(String itemTitle) {
+        Common.sendKeysToElement(
+                Locator.Varle.VarleLtWebsite.inputPaieska,
+                itemTitle
+        );
+    }
+    public static void clickOnRequiredFirstItemTitle() {
+        Common.clickOnElement(Locator.Varle.VarleLtWebsite.requiredFirstItemTitle);
+    }
+    public static void clickOnButtonIKrepseli() {
+        Common.clickOnElement(Locator.Varle.VarleLtWebsite.buttonIKrepseli);
+    }
+    public static String readMessageAfterItemPutToKrepselis() {
+        return Common.getTextFromElement(Locator.Varle.VarleLtWebsite.paragraphPrekeItraukaIKrepseli);
+    }
+    public static void clickOnbuttonPrekintisToliau() {
+        Common.clickOnElement(Locator.Varle.VarleLtWebsite.buttonPrekintisToliau);
+    }
+    public static void clickOnPrekiuKrepselis() {
+        Common.clickOnElement(Locator.Varle.VarleLtWebsite.buttonPrekiuKrepselis);
+    }
 
 }

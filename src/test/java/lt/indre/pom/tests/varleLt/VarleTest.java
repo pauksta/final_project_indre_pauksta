@@ -1,5 +1,6 @@
 package lt.indre.pom.tests.varleLt;
 
+import lt.indre.pom.pages.Common;
 import lt.indre.pom.pages.varleLt.VarlePage;
 import lt.indre.pom.tests.TestBase;
 import org.testng.Assert;
@@ -56,6 +57,28 @@ public class VarleTest extends TestBase {
         actualMessage = VarlePage.readMessageAfterUnsuccessfulLogin();
 
         Assert.assertEquals(actualMessage, expectedMessage);
+    }
+
+    @Test
+    public void testPutItemToKrepselis() {
+        String expectedResult = "Prekė įtraukta į krepšelį";
+        String actualResult;
+        String itemTitle = "Dulkių siurblys Dyson V11 ";
+
+        VarlePage.writeItemTitleInPaieska(itemTitle);
+        Common.clickEnterButton();
+        VarlePage.clickOnRequiredFirstItemTitle();
+        VarlePage.clickOnButtonIKrepseli();
+        actualResult = VarlePage.readMessageAfterItemPutToKrepselis();
+        VarlePage.clickOnbuttonPrekintisToliau();
+        VarlePage.clickOnPrekiuKrepselis();
+
+        Assert.assertTrue(
+                actualResult.contains(expectedResult),
+                "\nActual: %s, \nExpected: %s".formatted(
+                        actualResult, expectedResult
+                )
+        );
     }
 
 }

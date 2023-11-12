@@ -39,6 +39,17 @@ public class Locator {
                     "//div [@class = 'error-message-box' ]"
             );
 
+            public static By inputPaieska = By.xpath("//input [@name = 'q' ]");
+            public static By requiredFirstItemTitle = By.xpath(
+                    "//div [@class = 'img-container']"
+            );
+            public static By buttonIKrepseli = By.xpath(
+                    "//a [@class = 'primary-button full-width add-to-cart in-stock' ] "
+            );
+            public static By paragraphPrekeItraukaIKrepseli = By.xpath("//div [@class = 'popup-title' ]");
+            public static By buttonPrekintisToliau = By.xpath("//button [@class = 'secondary-button' ]");
+            public static By buttonPrekiuKrepselis = By.xpath("//span [@class = 'cart-items' ]");
+
             public static By attributeIdPrisijungimas(String attributeId, String attribute2Id) {
                 return By.xpath("//input [@type = '%s' and @name = '%s']".formatted(attributeId, attribute2Id));
             }

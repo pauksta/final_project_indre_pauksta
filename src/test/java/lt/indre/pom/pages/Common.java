@@ -2,8 +2,10 @@ package lt.indre.pom.pages;
 
 import lt.indre.pom.utilities.Driver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -42,6 +44,18 @@ public class Common {
 
     public static String getTextFromElement(By locator) {
         return getElement(locator).getText();
+    }
+
+    private static Actions getActions() {
+        return new Actions(Driver.getDriver());
+    }
+
+    public static void clickEnterButton() {
+        getActions()
+                .keyDown(Keys.ENTER)
+                .perform();
+
+
     }
 
 
