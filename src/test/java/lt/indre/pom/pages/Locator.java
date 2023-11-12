@@ -29,9 +29,7 @@ public class Locator {
             public static By paragraphtoSubmitToDeleteAccount = By.xpath(
                     "//div [@class = 'delete-account-trigger' ]"
             );
-            public static By attributeIdSlaptazodis(String attributeId) {
-                return By.xpath("//input [@type = 'password' and @name = '%s'] ".formatted(attributeId));
-            }
+
             public static By buttonPrisijungti = By.xpath(
                     "//button [@type = 'submit' and @class = 'primary-button full-width login-btn' ] "
             );
@@ -57,6 +55,10 @@ public class Locator {
 
             public static By attributeIdPrisijungimas(String attributeId, String attribute2Id) {
                 return By.xpath("//input [@type = '%s' and @name = '%s']".formatted(attributeId, attribute2Id));
+            }
+
+            public static By attributeIdSlaptazodis(String attributeId) {
+                return By.xpath("//input [@type = 'password' and @name = '%s'] ".formatted(attributeId));
             }
 
 
