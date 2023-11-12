@@ -40,6 +40,22 @@ public class VarleTest extends TestBase {
                         actualMessage, expectedMessage
                 )
         );
-
     }
+
+    @Test
+    public void testLoginToAccountWithNonExistingAccountInfo() {
+        String email = "fake@gmail.com";
+        String password = "123";
+        String expectedMessage = "Pateiktas el. pašto adresas ir/arba slaptažodis yra neteisingi.";
+        String actualMessage;
+
+        VarlePage.clickOnButtonPrisijungimas();
+        VarlePage.writeDataInPrisijungimasFields("email", "login", email);
+        VarlePage.writeDataInPrisijungimasFields("password", "password", password);
+        VarlePage.clickOnButtonPrisijungti();
+        actualMessage = VarlePage.readMessageAfterUnsuccessfulLogin();
+
+        Assert.assertEquals(actualMessage, expectedMessage);
+    }
+
 }

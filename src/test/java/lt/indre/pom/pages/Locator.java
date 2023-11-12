@@ -18,15 +18,32 @@ public class Locator {
                     "//button [@type = 'submit' and @class = 'primary-button full-width login-btn' ] "
             );
             public static By myAccount = By.xpath("//span [@class  = 'register' ]");
-            public static By buttonManoDuomenys = By.xpath("//img [@src = '/static/web/img/id-card-icon.svg' ] ");
-            public static By buttonNaikintiPaskyra = By.xpath("//span [@class = 'delete-account blue-link' ]");
-            public static By buttonTaipsubmitDeleteAccount = By.xpath("//button [@class = 'secondary-button confirm']");
-            public static By paragraphtoSubmitToDeleteAccount = By.xpath("//div [@class = 'delete-account-trigger' ]");
-
-
+            public static By buttonManoDuomenys = By.xpath(
+                    "//img [@src = '/static/web/img/id-card-icon.svg' ] "
+            );
+            public static By buttonNaikintiPaskyra = By.xpath(
+                    "//span [@class = 'delete-account blue-link' ]"
+            );
+            public static By buttonTaipsubmitDeleteAccount = By.xpath(
+                    "//button [@class = 'secondary-button confirm']");
+            public static By paragraphtoSubmitToDeleteAccount = By.xpath(
+                    "//div [@class = 'delete-account-trigger' ]"
+            );
             public static By attributeIdSlaptazodis(String attributeId) {
                 return By.xpath("//input [@type = 'password' and @name = '%s'] ".formatted(attributeId));
             }
+            public static By buttonPrisijungti = By.xpath(
+                    "//button [@type = 'submit' and @class = 'primary-button full-width login-btn' ] "
+            );
+            public static By messageAfterUnsuccessfulLogin = By.xpath(
+                    "//div [@class = 'error-message-box' ]"
+            );
+
+            public static By attributeIdPrisijungimas(String attributeId, String attribute2Id) {
+                return By.xpath("//input [@type = '%s' and @name = '%s']".formatted(attributeId, attribute2Id));
+            }
+
+
         }
     }
 }

@@ -23,16 +23,16 @@ public class VarlePage {
         Common.clickOnElement(Locator.Varle.VarleLtWebsite.textRegistruotis);
     }
 
-    public static void inputValidElPastas(String elPastas) {
+    public static void inputValidElPastas(String email) {
         Common.sendKeysToElement(Locator.Varle.VarleLtWebsite.inputElPastas,
-                elPastas
+                email
         );
     }
 
-    public static void inputSlaptazodis(String attributeId, String slaptazodis) {
+    public static void inputSlaptazodis(String attributeId, String password) {
         Common.sendKeysToElement(
                 Locator.Varle.VarleLtWebsite.attributeIdSlaptazodis(attributeId),
-                slaptazodis
+                password
         );
     }
 
@@ -63,4 +63,18 @@ public class VarlePage {
     public static String readMessagetoSumbitToDeleteAccount() {
         return Common.getTextFromElement(Locator.Varle.VarleLtWebsite.paragraphtoSubmitToDeleteAccount);
     }
+
+    public static void writeDataInPrisijungimasFields(String attributeId, String attribute2Id, String email) {
+        Common.sendKeysToElement(Locator.Varle.VarleLtWebsite.attributeIdPrisijungimas(attributeId, attribute2Id),
+                email);
+    }
+    public static void clickOnButtonPrisijungti() {
+        Common.clickOnElement(Locator.Varle.VarleLtWebsite.buttonPrisijungti);
+    }
+
+    public static String readMessageAfterUnsuccessfulLogin() {
+        return Common.getTextFromElement(Locator.Varle.VarleLtWebsite.messageAfterUnsuccessfulLogin);
+    }
+
+
 }
