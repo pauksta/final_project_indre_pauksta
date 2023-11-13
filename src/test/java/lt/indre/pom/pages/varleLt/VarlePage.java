@@ -36,7 +36,7 @@ public class VarlePage {
         );
     }
 
-    public static void clickToCheckSusipazinauSuNaudojimoTaisyklemis() {
+    public static void clickOnCheckboxSusipazinauSuNaudojimoTaisyklemis() {
         Common.clickOnElement(Locator.Varle.VarleLtWebsite.buttonSusiipazinauSuTaisyklemis);
     }
 
@@ -108,5 +108,22 @@ public class VarlePage {
     public static String readMessageEmptyBasket() {
         return Common.getTextFromElement(Locator.Varle.VarleLtWebsite.paragraphEmptyBasket);
     }
+    public static void clickOnButtonVisosPrekes() {
+        Common.clickOnElement(Locator.Varle.VarleLtWebsite.buttonVisosPrekes);
+    }
+    public static void clickOnCategoryTelefonaiFotoVideo() {
+        Common.clickOnElement(Locator.Varle.VarleLtWebsite.categoryTelefonaiFotoVideo);
+    }
+
+    public static void inputCategoryTitle(String categoryTitle) {
+        Common.sendKeysToElement(Locator.Varle.VarleLtWebsite.inputCategoryTitle,
+                categoryTitle
+        );
+    }
+
+    public static void clickOnCategoryMobiliejiTelefonai() {
+        Common.clickOnElement(Locator.Varle.VarleLtWebsite.inputMobiliejiTelefonai);
+    }
+
 
 }

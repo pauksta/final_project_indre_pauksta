@@ -53,6 +53,17 @@ public class Locator {
             public static By buttonRemoveItemFromKrepselis = By.xpath("//a [@class = 'remove' ]");
             public static By paragraphEmptyBasket = By.xpath("//div [@class = 'shopping-container' ]");
 
+            public static By buttonVisosPrekes = By.xpath("//a [@class = 'burger-grid' ] ");
+            public static By categoryTelefonaiFotoVideo = By.xpath(
+                    "//a [@href  = '/fototechnika-gps-telefonai-ipad/' ]"
+            );
+            public static By inputCategoryTitle = By.xpath(
+                    "//input [@type= 'text' and @placeholder = 'Ieškoti' ]"
+            );
+            public static By inputMobiliejiTelefonai = By.xpath(
+                    "//li[@class = 'value svelte-lrs4yl range-filter-value active' ] "
+            );
+
             public static By attributeIdPrisijungimas(String attributeId, String attribute2Id) {
                 return By.xpath("//input [@type = '%s' and @name = '%s']".formatted(attributeId, attribute2Id));
             }

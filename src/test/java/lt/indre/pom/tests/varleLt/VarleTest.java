@@ -27,7 +27,7 @@ public class VarleTest extends TestBase {
         VarlePage.inputValidElPastas(email);
         VarlePage.inputSlaptazodis("password1", password);
         VarlePage.inputSlaptazodis("password2", password);
-        VarlePage.clickToCheckSusipazinauSuNaudojimoTaisyklemis();
+        VarlePage.clickOnCheckboxSusipazinauSuNaudojimoTaisyklemis();
         VarlePage.clickOnButtonRegistruotis();
         VarlePage.clickOnProfile();
         VarlePage.clickOnButtonManoDuomenys();
@@ -105,7 +105,26 @@ public class VarleTest extends TestBase {
                 )
         );
     }
+    @Test
+    public void testFilterItemByParametersGamintojasModelis() {
+        String categoryTitle = "Mobilieji Telefonai";
+        String gamintojas = "Samsung";
+        String expectedResult = "";
+        String actualResult = "";
 
+        VarlePage.clickOnButtonVisosPrekes();
+        VarlePage.clickOnCategoryTelefonaiFotoVideo();
+        VarlePage.inputCategoryTitle(categoryTitle);
+        VarlePage.clickOnCategoryMobiliejiTelefonai();
+
+
+//            Assert.assertTrue(
+//                    actualResult.contains(expectedResult),
+//                    "\nActual: %s, \nExpected: %s".formatted(
+//                            actualResult, expectedResult
+//                    )
+//            );
+    }
 
 
 }
