@@ -23,7 +23,7 @@ public class WishlistTest extends TestBase {
     }
 
     @Test (priority =1)
-    public void addItemSyossSampunasOleoIntenseToWishlist() {
+    public void testaddItemSyossSampunasOleoIntenseToWishlist() {
         String itemTitle = "Syoss Šampūnas Oleo Intense";
         String expectedMessage = "Patikusios prekės (1)\nSyoss Šampūnas Oleo Intense, 440ml";
         String actualMessage;
@@ -45,18 +45,20 @@ public class WishlistTest extends TestBase {
     }
 
     @Test (priority =2)
-    public  void removeItemSoyssSampunasOleoIntenseFromWishlist(){
+    public  void testremoveItemSoyssSampunasOleoIntenseFromWishlist(){
 
-        String expectedResult = "Tavo patikusių prekių sąrašas yra tuščias, norėdamas pridėti prekių į šį sąrašą ieškok  ženkliuko";
+        String expectedResult = "Tavo patikusių prekių sąrašas yra tuščias, norėdamas pridėti prekių į šį sąrašą ieškok ženkliuko";
         String actualResult;
 
-//        WishlistPage.clickOnHeartSymbolToRemoveItemFromWishlist();
         WishlistPage.clickPasalintiToRemoveItemFromWishlist();
-        WishlistPage.clickButtonAtsijungti();
-//        actualResult = WishlistPage.readMessageEmtyWishlist();
-//        WishlistPage.clickButtonAtsijungtiWithActions();
+        actualResult = WishlistPage.readMessageEmtyWishlist();
 
-
+        Assert.assertTrue(
+                actualResult.contains(expectedResult),
+                "\nActual: %s, \nExpected: %s".formatted(
+                        actualResult, expectedResult
+                )
+        );
 
     }
 

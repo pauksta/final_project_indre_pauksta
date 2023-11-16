@@ -59,11 +59,4 @@ public class Common {
 
     }
 
-
-    public static void leftClickWithActions(By locator) {
-        getActions()
-                .click()
-                .perform();
-
-    }
 }

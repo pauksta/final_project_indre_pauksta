@@ -26,10 +26,12 @@ public class WishlistPage {
     }
 
     public static void clickOnItemSoyssSampunasOleoItense() {
+        Common.waitElementWhenAvailableCustomised(Locator.Varle.WishList.itemSoyssSampunasOleoItense, 3);
         Common.clickOnElement(Locator.Varle.WishList.itemSoyssSampunasOleoItense);
     }
 
     public static void clickOnHeartSymbolToPutItemSoyssSampunasOleoItemToPatikusiosPrekes() {
+        Common.waitElementWhenAvailableCustomised(Locator.Varle.WishList.checkboxSymbolHeart, 3);
         Common.clickOnElement(Locator.Varle.WishList.checkboxSymbolHeart);
 
 
@@ -40,16 +42,16 @@ public class WishlistPage {
     }
 
     public static void clickOnPrisijungimas() {
-        Common.clickOnElement(Locator.Varle.WishList.selectPrisijungimas);
+        Common.clickOnElement(Locator.Varle.SetUp.labelPrisijungimas);
     }
 
     public static void writeDataInPrisijungimasFields(String attributeId, String attribute2Id, String email) {
-        Common.sendKeysToElement(Locator.Varle.WishList.attributeIdPrisijungimas(attributeId, attribute2Id),
+        Common.sendKeysToElement(Locator.Varle.SetUp.attributeIdPrisijungimas(attributeId, attribute2Id),
                 email);
     }
 
     public static void clickOnButtonPrisijungti() {
-        Common.clickOnElement(Locator.Varle.WishList.buttonPrisijungti);
+        Common.clickOnElement(Locator.Varle.SetUp.buttonPrisijungti);
     }
 
     public static void clickOnPatikusiosPrekes() {
@@ -62,14 +64,6 @@ public class WishlistPage {
                 Common.getTextFromElement(Locator.Varle.WishList.titleSoyssSampunasOleoIntense);
     }
 
-    public static void clickOnHeartSymbolToRemoveItemFromWishlist() {
-        Common.clickOnElement(Locator.Varle.WishList.heartSymbol);
-    }
-
-    public static void clickButtonAtsijungti() {
-        Common.clickOnElement(Locator.Varle.WishList.buttonAtsijungti);
-    }
-
     public static void clickPasalintiToRemoveItemFromWishlist() {
         Common.clickOnElement(Locator.Varle.WishList.labelPasalinti);
     }
@@ -78,7 +72,5 @@ public class WishlistPage {
         return Common.getTextFromElement(Locator.Varle.WishList.messageEmtyWishlist);
     }
 
-    public static void clickButtonAtsijungtiWithActions() {
-        Common.leftClickWithActions(Locator.Varle.WishList.buttonAtsijungti);
-    }
+
 }
