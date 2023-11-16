@@ -15,9 +15,10 @@ public class Driver {
         System.setProperty("webdriver.http.factory", "jdk-http-client");
 
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--force-device-scale-factor=0.75");
-        options.addArguments("--start-maximized");
-//        options.addArguments("--headless=new");
+        options.addArguments("--force-device-scale-factor=0.5");
+//               options.addArguments("--start-maximized");
+        options.addArguments("--window-size=1920,1080");
+        options.addArguments("--headless=new");
 
         drivers.set(new ChromeDriver(options));
         drivers.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
@@ -28,8 +29,8 @@ public class Driver {
     }
 
     public static void quitDriver () {
-//        drivers.get().quit();
-//        drivers.remove();
+        drivers.get().quit();
+        drivers.remove();
     }
 
 }

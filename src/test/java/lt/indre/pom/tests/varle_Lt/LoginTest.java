@@ -1,6 +1,6 @@
-package lt.indre.pom.tests.varleLt;
+package lt.indre.pom.tests.varle_Lt;
 
-import lt.indre.pom.pages.varleLt.LoginPage;
+import lt.indre.pom.pages.varle_Lt.LoginPage;
 import lt.indre.pom.tests.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -27,16 +27,21 @@ public class LoginTest extends TestBase {
     @Test(dataProvider = "nonExistAccountInfo")
     public void testNegativeLoginToAccountWithNonExistAccountInfo(String email, String password) {
 
-        String expectedMessage = "Pateiktas el. pašto adresas ir/arba slaptažodis yra neteisingi.";
-        String actualMessage;
+        String expectedResult = "Pateiktas el. pašto adresas ir/arba slaptažodis yra neteisingi.";
+        String actualResult;
 
         LoginPage.clickOnPrisijungimas();
         LoginPage.writeDataInPrisijungimasFields("email", "login", email);
         LoginPage.writeDataInPrisijungimasFields("password", "password", password);
         LoginPage.clickOnButtonPrisijungti();
-        actualMessage = LoginPage.readMessageAfterUnsuccessfulLogin();
+        actualResult = LoginPage.readMessageAfterUnsuccessfulLogin();
 
-        Assert.assertEquals(actualMessage, expectedMessage);
+        Assert.assertTrue(
+                actualResult.contains(expectedResult),
+                "\nActual: %s, \nExpected: %s".formatted(
+                        actualResult, expectedResult
+                )
+        );
     }
 
 

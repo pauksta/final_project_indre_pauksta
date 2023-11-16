@@ -1,4 +1,4 @@
-package lt.indre.pom.pages.varleLt;
+package lt.indre.pom.pages.varle_Lt;
 
 import lt.indre.pom.pages.Common;
 import lt.indre.pom.pages.Locator;
@@ -10,7 +10,7 @@ public class WishlistPage {
     }
 
     public static void acceptLeistiVisusSlapukus() {
-        Common.waitElementWhenVisible(Locator.Varle.SetUp.cookies,8);
+        Common.waitElementWhenVisible(Locator.Varle.SetUp.cookies, 8);
         Common.clickOnElement(Locator.Varle.SetUp.cookies);
     }
 
@@ -33,11 +33,10 @@ public class WishlistPage {
     public static void clickOnHeartSymbolToPutItemSoyssSampunasOleoItemToPatikusiosPrekes() {
         Common.waitElementWhenAvailableCustomised(Locator.Varle.WishList.checkboxSymbolHeart, 3);
         Common.clickOnElement(Locator.Varle.WishList.checkboxSymbolHeart);
-
-
     }
 
     public static void clickOnVarleLogoToReturnVarleMainPage() {
+        Common.waitElementWhenAvailableCustomised(Locator.Varle.WishList.logoVarle, 3);
         Common.clickOnElement(Locator.Varle.WishList.logoVarle);
     }
 
@@ -55,6 +54,7 @@ public class WishlistPage {
     }
 
     public static void clickOnPatikusiosPrekes() {
+        Common.waitElementWhenAvailableCustomised(Locator.Varle.WishList.selectPatikusiosPrekes,5);
         Common.clickOnElement(Locator.Varle.WishList.selectPatikusiosPrekes);
     }
 

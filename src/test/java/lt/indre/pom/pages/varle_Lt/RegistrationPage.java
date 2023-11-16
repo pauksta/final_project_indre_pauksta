@@ -1,8 +1,7 @@
-package lt.indre.pom.pages.varleLt;
+package lt.indre.pom.pages.varle_Lt;
 
 import lt.indre.pom.pages.Common;
 import lt.indre.pom.pages.Locator;
-import org.openqa.selenium.By;
 
 public class RegistrationPage {
     public static void openChrome(String url) {
@@ -43,9 +42,6 @@ public class RegistrationPage {
         Common.clickOnElement(Locator.Varle.Registration.buttonRegistruotis);
     }
 
-    public static void clickOnMyAccountSveiki() {
-        Common.clickOnElement(Locator.Varle.Registration.myAccount);
-    }
 
     public static void clickOnManoDuomenys() {
         Common.clickOnElement(Locator.Varle.Registration.manoDuomenys);

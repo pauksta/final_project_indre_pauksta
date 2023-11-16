@@ -3,10 +3,10 @@ package lt.indre.pom.pages;
 import org.openqa.selenium.By;
 
 public class Locator {
+
     public static class Varle {
 
         public static class SetUp {
-
             public static By cookies = By.xpath(
                     "//button [@id = 'CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll' ]"
             );
@@ -23,7 +23,6 @@ public class Locator {
 
         }
 
-
         public static class Registration {
             public static By selectRegistracija = By.xpath(
                     "//img [@src = '/static/web/img/account-icon.svg']"
@@ -38,9 +37,6 @@ public class Locator {
             public static By buttonRegistruotis = By.xpath(
                     "//button [@type = 'submit' and @class = 'primary-button full-width login-btn' ] "
             );
-
-//            public static By myAccount = By.xpath("//span [@class  = 'register' ]");
-            public static By myAccount = By.xpath("//* [span =  'Sveiki,'  ] ");
 
             public static By manoDuomenys = By.xpath(
                     "//img [@src = '/static/web/img/id-card-icon.svg' ] "
@@ -59,7 +55,9 @@ public class Locator {
             public static By buttonPrisijungti = By.xpath(
                     "//button [@type = 'submit' and @class = 'primary-button full-width login-btn' ]"
             );
-            public static By textRegistracija = By.xpath("//span[@class='register']/span[text()='Registracija']");
+            public static By textRegistracija = By.xpath(
+                    "//span[@class='register']/span[text()='Registracija']"
+            );
 
 
             public static By attributeIdSlaptazodis(String attributeId) {
@@ -73,7 +71,6 @@ public class Locator {
         }
 
         public static class Login {
-
             public static By selectPrisijungimas = By.xpath(
                     "//img [@src = '/static/web/img/account-icon.svg']"
             );
@@ -101,19 +98,23 @@ public class Locator {
             public static By buttonIKrepseli = By.xpath(
                     "//a [@class = 'primary-button full-width add-to-cart in-stock' ] "
             );
-            public static By paragraphPrekeItraukaIKrepseli = By.xpath("//div [@class = 'popup-title' ]");
             public static By buttonPrekintisToliau = By.xpath("//button [@class = 'secondary-button' ]");
-            public static By buttonPrekiuKrepselis = By.xpath("//span [@class = 'cart-items' ]");
 
-            public static By itemKavosAparatasDelongiEcam22 = By.xpath("//div [@class = 'img-container']");
+            public static By buttonPrekiuKrepselis = By.xpath("//a [@href = '#' and @data-tooltip = 'Krepšelis' and @class = 'disabled' ]");
+
+            public static By itemKavosAparatasDelongiEcam22 = By.xpath(
+                    "//div [@class = 'img-container']"
+            );
             public static By buttonQuantityUp = By.xpath("//button [@class = 'quantity-up' ]");
-            public static By buttonRemoveItemFromKrepselis = By.xpath("//a [@class = 'remove' ]");
-            public static By paragraphEmptyBasket = By.xpath("//div [@class = 'shopping-container' ]");
 
+            public static By buttonRemoveItemFromKrepselis = By.xpath("//a [@class = 'remove' ]");
+
+            public static By paragraphEmptyBasket = By.xpath("//a [@href = '#' and @data-tooltip = 'Krepšelis' and @class = 'disabled' ] ");
 
             public static By messageTitleKrepselis = By.xpath("//strong [@class = 'title' ]");
+
             public static By messageTitleDulkiuSiurblysDysonV11 = By.xpath(
-                    "//a[contains(text(), 'Dulkių siurblys Dyson V11 Absolute')]"
+                    "//a[contains(text(), 'Dulkių siurblys Dyson V10 Absolute')]"
             );
 
         }
@@ -121,13 +122,17 @@ public class Locator {
         public static class WishList {
 
             public static By inputInPaieska = By.xpath("//input [@name = 'q' ]");
-            public static By itemSoyssSampunasOleoItense = By.xpath("//div [@class = 'img-container']");
+
+            public static By itemSoyssSampunasOleoItense = By.xpath(
+                    "//div [@class = 'img-container']"
+            );
             public static By checkboxSymbolHeart = By.xpath(
                     "//div [@class = 'share-like for-desktop' ]"
             );
             public static By logoVarle = By.xpath("//a [@href = '/' and @class = 'logo']");
 
-            public static By selectPatikusiosPrekes = By.xpath("//img [@alt = 'wishlist' ]");
+            public static By selectPatikusiosPrekes = By.xpath("//div [@class =  'header-wishlist-container' ] ");
+
             public static By textPatikusiosPrekes = By.xpath(
                     "//* [contains(  text(),  'Patikusios prekės ('  )]"
             );
@@ -147,7 +152,6 @@ public class Locator {
 
 
         }
-
 
     }
 

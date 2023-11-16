@@ -1,4 +1,4 @@
-package lt.indre.pom.pages.varleLt;
+package lt.indre.pom.pages.varle_Lt;
 
 import lt.indre.pom.pages.Common;
 import lt.indre.pom.pages.Locator;

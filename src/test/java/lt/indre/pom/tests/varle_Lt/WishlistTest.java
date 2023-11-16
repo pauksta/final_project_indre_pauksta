@@ -1,6 +1,6 @@
-package lt.indre.pom.tests.varleLt;
+package lt.indre.pom.tests.varle_Lt;
 
-import lt.indre.pom.pages.varleLt.WishlistPage;
+import lt.indre.pom.pages.varle_Lt.WishlistPage;
 import lt.indre.pom.tests.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -22,7 +22,7 @@ public class WishlistTest extends TestBase {
         WishlistPage.clickOnButtonPrisijungti();
     }
 
-    @Test (priority =1)
+    @Test(priority = 1)
     public void testaddItemSyossSampunasOleoIntenseToWishlist() {
         String itemTitle = "Syoss Šampūnas Oleo Intense";
         String expectedMessage = "Patikusios prekės (1)\nSyoss Šampūnas Oleo Intense, 440ml";
@@ -44,10 +44,11 @@ public class WishlistTest extends TestBase {
         );
     }
 
-    @Test (priority =2)
-    public  void testremoveItemSoyssSampunasOleoIntenseFromWishlist(){
+    @Test(priority = 2)
+    public void testremoveItemSoyssSampunasOleoIntenseFromWishlist() {
 
-        String expectedResult = "Tavo patikusių prekių sąrašas yra tuščias, norėdamas pridėti prekių į šį sąrašą ieškok ženkliuko";
+        String expectedResult =
+                "Tavo patikusių prekių sąrašas yra tuščias, norėdamas pridėti prekių į šį sąrašą ieškok ženkliuko";
         String actualResult;
 
         WishlistPage.clickPasalintiToRemoveItemSoyssSampunasFromWishlist();
@@ -61,6 +62,5 @@ public class WishlistTest extends TestBase {
         );
 
     }
-
 
 }

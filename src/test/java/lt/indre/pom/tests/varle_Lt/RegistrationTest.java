@@ -1,7 +1,6 @@
-package lt.indre.pom.tests.varleLt;
+package lt.indre.pom.tests.varle_Lt;
 
-import lt.indre.pom.pages.varleLt.RegistrationPage;
-import lt.indre.pom.pages.varleLt.WishlistPage;
+import lt.indre.pom.pages.varle_Lt.RegistrationPage;
 import lt.indre.pom.tests.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -16,13 +15,12 @@ public class RegistrationTest extends TestBase {
 
     }
 
-
     @Test(priority = 1)
     public void testAccountRegistrationWithValidEmail() {
-        String email = "bandymas20@gmail.com";
+        String email = "bandymas7899@gmail.com";
         String password = "1234";
-        String expectedMessage = "Sveiki,";
-        String actualMessage;
+        String expectedResult = "Sveiki,";
+        String actualResult;
 
         RegistrationPage.clickOnRegistracija();
         RegistrationPage.clickOnTextRegistruotis();
@@ -31,20 +29,19 @@ public class RegistrationTest extends TestBase {
         RegistrationPage.inputSlaptazodis("password2", password);
         RegistrationPage.clickOnCheckboxSusipazinauSuNaudojimoTaisyklemis();
         RegistrationPage.clickOnButtonRegistruotis();
-        actualMessage = RegistrationPage.readSveikiAccountName();
-//        RegistrationPage.clickOnMyAccountSveiki();
+        actualResult = RegistrationPage.readSveikiAccountName();
 
         Assert.assertTrue(
-                actualMessage.contains(expectedMessage),
+                actualResult.contains(expectedResult),
                 "\nActual: %s, \nExpected: %s".formatted(
-                        actualMessage, expectedMessage
+                        actualResult, expectedResult
                 )
         );
     }
 
     @Test(priority = 2)
-    public void testDeleteAccount() {
-        String email = "bandymas20@gmail.com";
+    public void testDeleteValidAccount() {
+        String email = "bandymas7899@gmail.com";
         String password = "1234";
         String expectedResult = "Registracija";
         String actualResult;

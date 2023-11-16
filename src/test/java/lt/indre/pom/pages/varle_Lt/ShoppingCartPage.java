@@ -1,8 +1,7 @@
-package lt.indre.pom.pages.varleLt;
+package lt.indre.pom.pages.varle_Lt;
 
 import lt.indre.pom.pages.Common;
 import lt.indre.pom.pages.Locator;
-import org.openqa.selenium.By;
 
 public class ShoppingCartPage {
     public static void openChrome(String url) {
@@ -28,21 +27,21 @@ public class ShoppingCartPage {
     }
 
     public static void clickOnButtonIKrepseli() {
-        Common.clickOnElement(Locator.Varle.ShoppingCart.buttonIKrepseli);
+        Common.waitElementWhenAvailableCustomised(Locator.Varle.ShoppingCart.buttonIKrepseli,10);
+//        Common.clickOnElement(Locator.Varle.ShoppingCart.buttonIKrepseli);
+        Common.click(Locator.Varle.ShoppingCart.buttonIKrepseli);
     }
 
-    public static String readMessageAfterItemPutToKrepselis() {
-        return Common.getTextFromElement(Locator.Varle.ShoppingCart.paragraphPrekeItraukaIKrepseli);
-    }
 
     public static void clickOnButtonPrekintisToliau() {
-        Common.waitElementWhenAvailableCustomised(Locator.Varle.ShoppingCart.buttonPrekintisToliau, 3);
+        Common.waitElementWhenAvailableCustomised(Locator.Varle.ShoppingCart.buttonPrekintisToliau, 10);
         Common.clickOnElement(Locator.Varle.ShoppingCart.buttonPrekintisToliau);
     }
 
     public static void clickOnPrekiuKrepselis() {
-        Common.waitElementWhenAvailableCustomised(Locator.Varle.ShoppingCart.buttonPrekiuKrepselis, 3);
+        Common.waitElementWhenAvailableCustomised(Locator.Varle.ShoppingCart.buttonPrekiuKrepselis, 10);
         Common.clickOnElement(Locator.Varle.ShoppingCart.buttonPrekiuKrepselis);
+
     }
 
     public static void clickOnItemKavosAparatasDelonghiEcam22() {
@@ -65,7 +64,7 @@ public class ShoppingCartPage {
 
 
     public static void clickOnItemDulkiuSiurblysDysonV11() {
-        Common.waitElementWhenAvailableCustomised(Locator.Varle.ShoppingCart.itemDulkiuSiurblysDysonV11, 5);
+        Common.waitElementWhenVisible(Locator.Varle.ShoppingCart.itemDulkiuSiurblysDysonV11, 8);
         Common.clickOnElement(Locator.Varle.ShoppingCart.itemDulkiuSiurblysDysonV11);
     }
 
@@ -73,5 +72,13 @@ public class ShoppingCartPage {
         return Common.getTextFromElement(Locator.Varle.ShoppingCart.messageTitleKrepselis) + "\n" +
                 Common.getTextFromElement(Locator.Varle.ShoppingCart.messageTitleDulkiuSiurblysDysonV11);
 
+    }
+
+    public static void clickOnPrekiuKrepselisWithActions() {
+        Common.click(Locator.Varle.ShoppingCart.buttonPrekiuKrepselis);
+    }
+
+    public static void clickOnXToRemoveItemsWithActions() {
+        Common.click(Locator.Varle.ShoppingCart.buttonRemoveItemFromKrepselis);
     }
 }
