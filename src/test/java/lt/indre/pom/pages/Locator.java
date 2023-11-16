@@ -10,7 +10,19 @@ public class Locator {
             public static By cookies = By.xpath(
                     "//button [@id = 'CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll' ]"
             );
+            public static By labelPrisijungimas = By.xpath(
+                    "//img [@src = '/static/web/img/account-icon.svg']"
+            );
+            public static By buttonPrisijungti = By.xpath(
+                    "//button [@type = 'submit' and @class = 'primary-button full-width login-btn' ]"
+            );
+
+            public static By attributeIdPrisijungimas(String attributeId, String attribute2Id) {
+                return By.xpath("//input [@type = '%s' and @name = '%s']".formatted(attributeId, attribute2Id));
+            }
+
         }
+
 
         public static class Registration {
             public static By selectRegistracija = By.xpath(
@@ -41,12 +53,23 @@ public class Locator {
 
             public static By messageSveikiAccountName = By.xpath("//a [@href = '/profile/' ]");
 
+            public static By labelPrisijungimas = By.xpath(
+                    "//img [@src = '/static/web/img/account-icon.svg']"
+            );
+            public static By buttonPrisijungti = By.xpath(
+                    "//button [@type = 'submit' and @class = 'primary-button full-width login-btn' ]"
+            );
+            public static By textRegistracija = By.xpath("//span[@class='register']/span[text()='Registracija']");
+
 
             public static By attributeIdSlaptazodis(String attributeId) {
                 return By.xpath("//input [@type = 'password' and @name = '%s'] ".formatted(attributeId));
             }
 
 
+            public static By attributeIdPrisijungimas(String attributeId, String attribute2Id) {
+                return By.xpath("//input [@type = '%s' and @name = '%s']".formatted(attributeId, attribute2Id));
+            }
         }
 
         public static class Login {
@@ -103,12 +126,7 @@ public class Locator {
                     "//div [@class = 'share-like for-desktop' ]"
             );
             public static By logoVarle = By.xpath("//a [@href = '/' and @class = 'logo']");
-            public static By selectPrisijungimas = By.xpath(
-                    "//img [@src = '/static/web/img/account-icon.svg']"
-            );
-            public static By buttonPrisijungti = By.xpath(
-                    "//button [@type = 'submit' and @class = 'primary-button full-width login-btn' ]"
-            );
+
             public static By selectPatikusiosPrekes = By.xpath("//img [@alt = 'wishlist' ]");
             public static By textPatikusiosPrekes = By.xpath(
                     "//* [contains(  text(),  'Patikusios prekės ('  )]"
@@ -127,9 +145,7 @@ public class Locator {
             );
             public static By messageEmtyWishlist = By.xpath("//div [@class = 'no-wishlist' ]");
 
-            public static By attributeIdPrisijungimas(String attributeId, String attribute2Id) {
-                return By.xpath("//input [@type = '%s' and @name = '%s']".formatted(attributeId, attribute2Id));
-            }
+
         }
 
 

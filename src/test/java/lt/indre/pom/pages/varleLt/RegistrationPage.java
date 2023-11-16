@@ -62,4 +62,21 @@ public class RegistrationPage {
     public static String readSveikiAccountName() {
         return Common.getTextFromElement(Locator.Varle.Registration.messageSveikiAccountName);
     }
+
+    public static void clickOnPrisijungimas() {
+        Common.clickOnElement(Locator.Varle.Registration.labelPrisijungimas);
+    }
+
+    public static void writeDataInPrisijungimasFields(String attributeId, String attribute2Id, String email) {
+        Common.sendKeysToElement(Locator.Varle.Registration.attributeIdPrisijungimas(attributeId, attribute2Id),
+                email);
+    }
+
+    public static void clickOnButtonPrisijungti() {
+        Common.clickOnElement(Locator.Varle.Registration.buttonPrisijungti);
+    }
+
+    public static String readTextRegistracija() {
+        return Common.getTextFromElement(Locator.Varle.Registration.textRegistracija);
+    }
 }
