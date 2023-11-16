@@ -64,7 +64,7 @@ public class WishlistPage {
                 Common.getTextFromElement(Locator.Varle.WishList.titleSoyssSampunasOleoIntense);
     }
 
-    public static void clickPasalintiToRemoveItemFromWishlist() {
+    public static void clickPasalintiToRemoveItemSoyssSampunasFromWishlist() {
         Common.clickOnElement(Locator.Varle.WishList.labelPasalinti);
     }
 

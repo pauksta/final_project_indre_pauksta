@@ -24,7 +24,9 @@
 10. click  *"Naikinti paskyra"*
 11. click  *"Taip"*
  
-Expected result: In main page in account title should be *"Sveiki"*
+Expected result: In main page, account title should be *"Sveiki"*
+
+*Test: Account registration with valid email*
 
 `Login`
 
@@ -64,7 +66,7 @@ Expected result: Shopping cart should be empty *"Krepšelis Tuščias"*
 
 `Wishlist`
 
-*Test: add item Syoss Šampūnas Oleo Intense to wishlist
+*Test: add item Syoss Šampūnas Oleo Intense to wishlist*
 
 1. (before doing these steps need to log in)
 2. input item title in *"Paieška"* (Syoss Šampūnas Oleo Intense)
@@ -74,6 +76,13 @@ Expected result: Shopping cart should be empty *"Krepšelis Tuščias"*
 6. click *"Patikusios prekės"*
 
 Expected result: Item Syoss šampūnas Oleo Intense should be in wishlist.
+
+*Test: remove Syoss Šampūnas Oleo Intense from wishlist*
+
+1. (before doing these steps need to log in)
+2. click *"Pasalinti*"
+
+Expected result: Wishlist shoud be empty.
 
 
 

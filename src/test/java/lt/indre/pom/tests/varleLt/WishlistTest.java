@@ -50,7 +50,7 @@ public class WishlistTest extends TestBase {
         String expectedResult = "Tavo patikusių prekių sąrašas yra tuščias, norėdamas pridėti prekių į šį sąrašą ieškok ženkliuko";
         String actualResult;
 
-        WishlistPage.clickPasalintiToRemoveItemFromWishlist();
+        WishlistPage.clickPasalintiToRemoveItemSoyssSampunasFromWishlist();
         actualResult = WishlistPage.readMessageEmtyWishlist();
 
         Assert.assertTrue(
