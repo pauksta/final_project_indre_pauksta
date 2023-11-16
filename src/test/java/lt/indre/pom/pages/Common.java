@@ -1,10 +1,7 @@
 package lt.indre.pom.pages;
 
 import lt.indre.pom.utilities.Driver;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -24,6 +21,11 @@ public class Common {
     public static void waitElementWhenVisible(By locator, int seconds) throws TimeoutException {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(seconds));
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+
+    public static void waitElementWhenAvailableCustomised(By locator, int seconds) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(seconds));
+        wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
 
     public static void quitDriver() {
@@ -55,8 +57,13 @@ public class Common {
                 .keyDown(Keys.ENTER)
                 .perform();
 
-
     }
 
 
+    public static void leftClickWithActions(By locator) {
+        getActions()
+                .click()
+                .perform();
+
+    }
 }
