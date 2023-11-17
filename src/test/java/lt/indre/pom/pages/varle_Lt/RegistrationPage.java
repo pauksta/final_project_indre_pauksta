@@ -9,12 +9,12 @@ public class RegistrationPage {
         Common.openUrl(url);
     }
     public static void acceptLeistiVisusSlapukus() {
-        Common.waitElementWhenVisible(Locator.Varle.SetUp.cookies,8);
-        Common.clickOnElement(Locator.Varle.SetUp.cookies);
+        Common.waitElementWhenVisible(Locator.Varle.SetUp.buttonCookies,8);
+        Common.clickOnElement(Locator.Varle.SetUp.buttonCookies);
     }
 
     public static void clickOnRegistracija() {
-        Common.clickOnElement(Locator.Varle.Registration.selectRegistracija);
+        Common.clickOnElement(Locator.Varle.Registration.buttonRegistracija);
     }
 
     public static void clickOnTextRegistruotis() {
@@ -44,11 +44,11 @@ public class RegistrationPage {
 
 
     public static void clickOnManoDuomenys() {
-        Common.clickOnElement(Locator.Varle.Registration.manoDuomenys);
+        Common.clickOnElement(Locator.Varle.Registration.labelManoDuomenys);
     }
 
     public static void clickOnNaikintiPaskyra() {
-        Common.clickOnElement(Locator.Varle.Registration.naikintiPaskyra);
+        Common.clickOnElement(Locator.Varle.Registration.labelNaikintiPaskyra);
     }
 
     public static void clickOnTaipToSubmitDeleteAccount() {

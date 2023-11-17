@@ -10,8 +10,8 @@ public class ShoppingCartPage {
     }
 
     public static void acceptLeistiVisusSlapukus() {
-        Common.waitElementWhenVisible(Locator.Varle.SetUp.cookies,8);
-        Common.clickOnElement(Locator.Varle.SetUp.cookies);
+        Common.waitElementWhenVisible(Locator.Varle.SetUp.buttonCookies,8);
+        Common.clickOnElement(Locator.Varle.SetUp.buttonCookies);
     }
 
     public static void inputItemTitleInPaieska(String itemTitle) {
@@ -26,10 +26,9 @@ public class ShoppingCartPage {
 
     }
 
-    public static void clickOnButtonIKrepseli() {
+    public static void clickOnButtonIKrepseliWithActions() {
         Common.waitElementWhenAvailableCustomised(Locator.Varle.ShoppingCart.buttonIKrepseli,10);
-//        Common.clickOnElement(Locator.Varle.ShoppingCart.buttonIKrepseli);
-        Common.click(Locator.Varle.ShoppingCart.buttonIKrepseli);
+        Common.clickWithActions(Locator.Varle.ShoppingCart.buttonIKrepseli);
     }
 
 
@@ -45,7 +44,8 @@ public class ShoppingCartPage {
     }
 
     public static void clickOnItemKavosAparatasDelonghiEcam22() {
-        Common.waitElementWhenAvailableCustomised(Locator.Varle.ShoppingCart.itemKavosAparatasDelongiEcam22, 3);
+        Common.waitElementWhenAvailableCustomised(Locator.Varle.ShoppingCart.itemKavosAparatasDelongiEcam22,
+                3);
         Common.clickOnElement(Locator.Varle.ShoppingCart.itemKavosAparatasDelongiEcam22);
     }
 
@@ -58,27 +58,19 @@ public class ShoppingCartPage {
         Common.clickOnElement(Locator.Varle.ShoppingCart.buttonRemoveItemFromKrepselis);
     }
 
-    public static String readMessageEmptyBasket() {
-        return Common.getTextFromElement(Locator.Varle.ShoppingCart.paragraphEmptyBasket);
+    public static String readMessageEmptyShoppingCart() {
+        return Common.getTextFromElement(Locator.Varle.ShoppingCart.paragraphEmptyShoppingCart);
     }
 
-
-    public static void clickOnItemDulkiuSiurblysDysonV11() {
-        Common.waitElementWhenVisible(Locator.Varle.ShoppingCart.itemDulkiuSiurblysDysonV11, 8);
-        Common.clickOnElement(Locator.Varle.ShoppingCart.itemDulkiuSiurblysDysonV11);
+    public static void clickOnItemDulkiuSiurblysDysonV10() {
+        Common.waitElementWhenVisible(Locator.Varle.ShoppingCart.itemDulkiuSiurblysDysonV10, 8);
+        Common.clickOnElement(Locator.Varle.ShoppingCart.itemDulkiuSiurblysDysonV10);
     }
 
-    public static String readMessageInKrepselisIsItemDulkiuSiurblysDysonV11() {
+    public static String readMessageInKrepselisIsItemDulkiuSiurblysDysonV10() {
         return Common.getTextFromElement(Locator.Varle.ShoppingCart.messageTitleKrepselis) + "\n" +
-                Common.getTextFromElement(Locator.Varle.ShoppingCart.messageTitleDulkiuSiurblysDysonV11);
+                Common.getTextFromElement(Locator.Varle.ShoppingCart.messageTitleDulkiuSiurblysDysonV10);
 
     }
 
-    public static void clickOnPrekiuKrepselisWithActions() {
-        Common.click(Locator.Varle.ShoppingCart.buttonPrekiuKrepselis);
-    }
-
-    public static void clickOnXToRemoveItemsWithActions() {
-        Common.click(Locator.Varle.ShoppingCart.buttonRemoveItemFromKrepselis);
-    }
 }

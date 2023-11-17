@@ -61,13 +61,6 @@ public class Common {
 
     public static void clickWithActions(By locator){
         getActions()
-                .moveToElement(getElement(locator))
-                .keyDown(Keys.LEFT)
-                .perform();
-    }
-
-    public static void click(By locator){
-        getActions()
                 .click(getElement(locator))
                 .perform();
     }

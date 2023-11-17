@@ -7,7 +7,7 @@ public class Locator {
     public static class Varle {
 
         public static class SetUp {
-            public static By cookies = By.xpath(
+            public static By buttonCookies = By.xpath(
                     "//button [@id = 'CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll' ]"
             );
             public static By labelPrisijungimas = By.xpath(
@@ -24,7 +24,7 @@ public class Locator {
         }
 
         public static class Registration {
-            public static By selectRegistracija = By.xpath(
+            public static By buttonRegistracija = By.xpath(
                     "//img [@src = '/static/web/img/account-icon.svg']"
             );
             public static By textRegistruotis = By.xpath("//a [@href = '/profile/register/']");
@@ -38,10 +38,10 @@ public class Locator {
                     "//button [@type = 'submit' and @class = 'primary-button full-width login-btn' ] "
             );
 
-            public static By manoDuomenys = By.xpath(
+            public static By labelManoDuomenys = By.xpath(
                     "//img [@src = '/static/web/img/id-card-icon.svg' ] "
             );
-            public static By naikintiPaskyra = By.xpath(
+            public static By labelNaikintiPaskyra = By.xpath(
                     "//span [@class = 'delete-account blue-link' ]"
             );
             public static By buttonTaipsubmitDeleteAccount = By.xpath(
@@ -71,7 +71,7 @@ public class Locator {
         }
 
         public static class Login {
-            public static By selectPrisijungimas = By.xpath(
+            public static By labelPrisijungimas = By.xpath(
                     "//img [@src = '/static/web/img/account-icon.svg']"
             );
 
@@ -93,14 +93,16 @@ public class Locator {
         public static class ShoppingCart {
             public static By inputPaieska = By.xpath("//input [@name = 'q' ]");
 
-            public static By itemDulkiuSiurblysDysonV11 = By.xpath("//div [@class = 'img-container']");
+            public static By itemDulkiuSiurblysDysonV10 = By.xpath("//div [@class = 'img-container']");
 
             public static By buttonIKrepseli = By.xpath(
                     "//a [@class = 'primary-button full-width add-to-cart in-stock' ] "
             );
             public static By buttonPrekintisToliau = By.xpath("//button [@class = 'secondary-button' ]");
 
-            public static By buttonPrekiuKrepselis = By.xpath("//a [@href = '#' and @data-tooltip = 'Krepšelis' and @class = 'disabled' ]");
+            public static By buttonPrekiuKrepselis = By.xpath(
+                    "//a [@href = '#' and @data-tooltip = 'Krepšelis' and @class = 'disabled' ]"
+            );
 
             public static By itemKavosAparatasDelongiEcam22 = By.xpath(
                     "//div [@class = 'img-container']"
@@ -109,11 +111,13 @@ public class Locator {
 
             public static By buttonRemoveItemFromKrepselis = By.xpath("//a [@class = 'remove' ]");
 
-            public static By paragraphEmptyBasket = By.xpath("//a [@href = '#' and @data-tooltip = 'Krepšelis' and @class = 'disabled' ] ");
+            public static By paragraphEmptyShoppingCart = By.xpath(
+                    "//a [@href = '#' and @data-tooltip = 'Krepšelis' and @class = 'disabled' ] "
+            );
 
             public static By messageTitleKrepselis = By.xpath("//strong [@class = 'title' ]");
 
-            public static By messageTitleDulkiuSiurblysDysonV11 = By.xpath(
+            public static By messageTitleDulkiuSiurblysDysonV10 = By.xpath(
                     "//a[contains(text(), 'Dulkių siurblys Dyson V10 Absolute')]"
             );
 
@@ -131,28 +135,23 @@ public class Locator {
             );
             public static By logoVarle = By.xpath("//a [@href = '/' and @class = 'logo']");
 
-            public static By selectPatikusiosPrekes = By.xpath("//div [@class =  'header-wishlist-container' ] ");
+            public static By buttonPatikusiosPrekes = By.xpath(
+                    "//div [@class =  'header-wishlist-container' ] "
+            );
 
-            public static By textPatikusiosPrekes = By.xpath(
+            public static By messagePatikusiosPrekes = By.xpath(
                     "//* [contains(  text(),  'Patikusios prekės ('  )]"
             );
             public static By titleSoyssSampunasOleoIntense = By.xpath(
                     "//a [contains (text(), 'Syoss Šampūnas Oleo Intense, 440ml' )]"
             );
-            public static By heartSymbol = By.xpath(
-                    "//span [@class = 'product-like active' ]"
-            );
-            public static By buttonAtsijungti = By.xpath(
-                    "//a[@href='/profile/logout/'] /span[@class='img-placeholder'] "
-            );
-            public static By labelPasalinti = By.xpath(
-                    "//button [@type= 'button' and @class = 'delete_wishlist_item-btn' ]"
-            );
-            public static By messageEmtyWishlist = By.xpath("//div [@class = 'no-wishlist' ]");
 
+            public static By messageEmptyWishlist = By.xpath("//div [@class = 'no-wishlist' ]");
 
+            public static By labelPasalinti = By.xpath("" +
+                    "//button [@type = 'button' and @class = 'delete_wishlist_item-btn']"
+            );
         }
-
     }
 
 }

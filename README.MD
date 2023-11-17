@@ -48,15 +48,15 @@ Expected result: Should be given a message for unsuccessful login
 
 `Shopping cart`
 
-*Test: Add item Dulkių siurblys Dyson V11 to Shopping Cart*
+*Test: Add item Dulkių siurblys Dyson V10 to Shopping Cart*
 
-1. input item title in *"Paieška"* (Dulkių siurblys Dyson V11)
-2. select item (Dulkių siurblys Dyson V11)
+1. input item title in *"Paieška"* (Dulkių siurblys Dyson V10)
+2. select item (Dulkių siurblys Dyson V10)
 3. click *"į krepšelį"* button
 4. click *"Prekintis toliau"* button
 5. click *"Prekių krepšelis"*
 
-Expected result: Item Dulkių siurblys Dyson V11 should be added to shopping cart
+Expected result: Item Dulkių siurblys Dyson V10 should be added to shopping cart
 
 *Test: Delete two items Kavos aparatas DeLonghi ECAM22 from shopping cart*
 

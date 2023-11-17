@@ -10,8 +10,8 @@ public class WishlistPage {
     }
 
     public static void acceptLeistiVisusSlapukus() {
-        Common.waitElementWhenVisible(Locator.Varle.SetUp.cookies, 8);
-        Common.clickOnElement(Locator.Varle.SetUp.cookies);
+        Common.waitElementWhenVisible(Locator.Varle.SetUp.buttonCookies, 8);
+        Common.clickOnElement(Locator.Varle.SetUp.buttonCookies);
     }
 
     public static void inputItemTitleSoyssSampunasOleoItenseInPaieska(String itemTitle) {
@@ -54,12 +54,12 @@ public class WishlistPage {
     }
 
     public static void clickOnPatikusiosPrekes() {
-        Common.waitElementWhenAvailableCustomised(Locator.Varle.WishList.selectPatikusiosPrekes,5);
-        Common.clickOnElement(Locator.Varle.WishList.selectPatikusiosPrekes);
+        Common.waitElementWhenAvailableCustomised(Locator.Varle.WishList.buttonPatikusiosPrekes,5);
+        Common.clickOnElement(Locator.Varle.WishList.buttonPatikusiosPrekes);
     }
 
     public static String readMessagePatikusiosPrekes() {
-        return Common.getTextFromElement(Locator.Varle.WishList.textPatikusiosPrekes)
+        return Common.getTextFromElement(Locator.Varle.WishList.messagePatikusiosPrekes)
                 + "\n" +
                 Common.getTextFromElement(Locator.Varle.WishList.titleSoyssSampunasOleoIntense);
     }
@@ -69,7 +69,7 @@ public class WishlistPage {
     }
 
     public static String readMessageEmtyWishlist() {
-        return Common.getTextFromElement(Locator.Varle.WishList.messageEmtyWishlist);
+        return Common.getTextFromElement(Locator.Varle.WishList.messageEmptyWishlist);
     }
 
 

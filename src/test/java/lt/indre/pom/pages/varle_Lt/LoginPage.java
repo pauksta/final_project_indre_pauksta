@@ -9,12 +9,12 @@ public class LoginPage {
         Common.openUrl(url);
     }
     public static void acceptLeistiVisusSlapukus() {
-        Common.waitElementWhenVisible(Locator.Varle.SetUp.cookies,8);
-        Common.clickOnElement(Locator.Varle.SetUp.cookies);
+        Common.waitElementWhenVisible(Locator.Varle.SetUp.buttonCookies,8);
+        Common.clickOnElement(Locator.Varle.SetUp.buttonCookies);
     }
 
     public static void clickOnPrisijungimas() {
-        Common.clickOnElement(Locator.Varle.Login.selectPrisijungimas);
+        Common.clickOnElement(Locator.Varle.Login.labelPrisijungimas);
 
     }
     public static void writeDataInPrisijungimasFields(String attributeId, String attribute2Id, String email) {

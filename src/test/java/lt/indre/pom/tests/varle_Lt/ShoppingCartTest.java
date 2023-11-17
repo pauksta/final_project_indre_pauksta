@@ -16,7 +16,7 @@ public class ShoppingCartTest extends TestBase {
     }
 
     @Test
-    public void testAddItemDulkiuSiurblysDysonV11ToShoppingCart() {
+    public void testAddItemDulkiuSiurblysDysonV10ToShoppingCart() {
 
         String itemTitle = "Dulkių siurblys Dyson V10 ";
         String expectedResult = "Krepšelis\nDulkių siurblys Dyson V10 Absolute";
@@ -24,11 +24,11 @@ public class ShoppingCartTest extends TestBase {
 
         ShoppingCartPage.inputItemTitleInPaieska(itemTitle);
         ShoppingCartPage.clickOnPaieskaWithAction();
-        ShoppingCartPage.clickOnItemDulkiuSiurblysDysonV11();
-        ShoppingCartPage.clickOnButtonIKrepseli();
+        ShoppingCartPage.clickOnItemDulkiuSiurblysDysonV10();
+        ShoppingCartPage.clickOnButtonIKrepseliWithActions();
         ShoppingCartPage.clickOnButtonPrekintisToliau();
         ShoppingCartPage.clickOnPrekiuKrepselis();
-        actualResult = ShoppingCartPage.readMessageInKrepselisIsItemDulkiuSiurblysDysonV11();
+        actualResult = ShoppingCartPage.readMessageInKrepselisIsItemDulkiuSiurblysDysonV10();
 
         Assert.assertTrue(
                 actualResult.contains(expectedResult),
@@ -49,12 +49,11 @@ public class ShoppingCartTest extends TestBase {
         ShoppingCartPage.clickOnPaieskaWithAction();
         ShoppingCartPage.clickOnItemKavosAparatasDelonghiEcam22();
         ShoppingCartPage.clickOnPlusToIncreaseQuantityOfItemKavosAparatasDelonghiEcam22();
-        ShoppingCartPage.clickOnButtonIKrepseli();
+        ShoppingCartPage.clickOnButtonIKrepseliWithActions();
         ShoppingCartPage.clickOnButtonPrekintisToliau();
         ShoppingCartPage.clickOnPrekiuKrepselis();
         ShoppingCartPage.clickOnXToRemoveTwoItemsKavosAparatasDelonghiEcam22FromKrepselis();
-//        ShoppingCartPage.clickOnXToRemoveItemsWithActions();
-        actualResult = ShoppingCartPage.readMessageEmptyBasket();
+        actualResult = ShoppingCartPage.readMessageEmptyShoppingCart();
 
         Assert.assertTrue(
                actualResult.contains(expectedResult),

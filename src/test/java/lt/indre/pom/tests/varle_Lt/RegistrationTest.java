@@ -17,7 +17,7 @@ public class RegistrationTest extends TestBase {
 
     @Test(priority = 1)
     public void testAccountRegistrationWithValidEmail() {
-        String email = "bandymas7899@gmail.com";
+        String email = "bandymas12345@gmail.com";
         String password = "1234";
         String expectedResult = "Sveiki,";
         String actualResult;
@@ -41,7 +41,7 @@ public class RegistrationTest extends TestBase {
 
     @Test(priority = 2)
     public void testDeleteValidAccount() {
-        String email = "bandymas7899@gmail.com";
+        String email = "bandymas12345@gmail.com";
         String password = "1234";
         String expectedResult = "Registracija";
         String actualResult;
